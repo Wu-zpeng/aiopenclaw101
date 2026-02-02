@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "github": "GitHub",
+    "backToHome": "Back to Home"
+  },
+  "home": {
+    "badge": "Global Availability",
+    "title": "The Ultimate AI Agent Navigation",
+    "subtitle": "Your gateway to the Local-First AI revolution.",
+    "description": "Aggregating OpenClaw core resources, global plugin ecosystem, and comprehensive deployment guides.",
+    "startBuilding": "Start Building",
+    "viewOnGitHub": "View on GitHub",
+    "platformsTitle": "Seamless Integration With",
+    "coreTitle": "OpenClaw Core",
+    "coreDescription": "The official Local-First AI Agent repository.",
+    "coreSubDescription": "Official core library, data privacy in your own hands.",
+    "coreLink": "Source Code",
+    "pluginsTitle": "Global Plugins",
+    "pluginsDescription": "Connect OpenClaw to Feishu, WeChat, and more.",
+    "pluginsSubDescription": "Essential plugins for connecting to domestic platforms like Feishu and WeChat.",
+    "pluginsLink": "Get Plugins",
+    "deployTitle": "Deploy Guide",
+    "deployDescription": "Docker scripts, API configuration, and network setup. Zero to Hero in 10 minutes.",
+    "deploySubDescription": "Comprehensive Docker one-click deployment tutorial for quick start.",
+    "deployLink": "Start Deployment",
+    "footerCopyright": "© 2026 OpenClaw101. Built for the Global Community.",
+    "footerDisclaimer": "Unofficial navigation site. All trademarks belong to their respective owners."
+  },
+  "deploy": {
+    "badge": "Docker Deployment",
+    "title": "OpenClaw Docker Deployment Guide",
+    "subtitle": "Deploy OpenClaw with Docker in minutes.",
+    "description": "Use Docker to quickly deploy OpenClaw and get your AI Agent running in minutes.",
+    "step1Title": "Install Docker",
+    "step1Description": "If you haven't installed Docker yet, please visit the Docker official website to download and install:",
+    "step1Button": "Download Docker Desktop",
+    "step1Check": "After installation, make sure the Docker service is running",
+    "step2Title": "Pull Image",
+    "step2Description": "Clone the OpenClaw repository to your local machine:",
+    "step2Check": "After cloning, enter the project directory:",
+    "step3Title": "Start Container",
+    "step3Description": "Use Docker Compose to start all services with one command:",
+    "step3Check1": "parameter means running the container in the background",
+    "step3Check2": "The first startup will automatically download the required Docker images, please be patient",
+    "step3Check3": "After successful startup, OpenClaw will continue to run in the background",
+    "successTitle": "Deployment Complete!",
+    "successDescription": "Congratulations! You have successfully deployed OpenClaw. Now you can start configuring your AI Agent and connecting to various platforms.",
+    "successButton1": "View Full Documentation",
+    "successButton2": "Back to Home"
+  }
+}

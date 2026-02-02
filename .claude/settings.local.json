@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(move layout.tsx [locale] )",
+      "Bash(move page.tsx [locale] )",
+      "Bash(move deploy [locale])",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:next-intl-docs.vercel.app)"
+    ]
+  }
+}

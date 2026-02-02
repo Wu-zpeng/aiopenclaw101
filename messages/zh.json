@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "github": "GitHub",
+    "backToHome": "返回首页"
+  },
+  "home": {
+    "badge": "全球平台支持",
+    "title": "终极 AI Agent 导航",
+    "subtitle": "您通往本地优先 AI 革命的门户。",
+    "description": "聚合 OpenClaw 核心资源、全球插件生态及保姆级部署指南。",
+    "startBuilding": "开始构建",
+    "viewOnGitHub": "在 GitHub 查看",
+    "platformsTitle": "无缝接入全球平台",
+    "coreTitle": "OpenClaw 核心",
+    "coreDescription": "官方本地优先 AI Agent 仓库。",
+    "coreSubDescription": "官方核心库，数据隐私掌握在自己手中。",
+    "coreLink": "源代码",
+    "pluginsTitle": "全球插件",
+    "pluginsDescription": "将 OpenClaw 连接到飞书、微信等平台。",
+    "pluginsSubDescription": "连接飞书、微信等国内平台的必备插件。",
+    "pluginsLink": "获取插件",
+    "deployTitle": "部署指南",
+    "deployDescription": "Docker 脚本、API 配置和网络设置。10 分钟从零到英雄。",
+    "deploySubDescription": "保姆级 Docker 一键部署教程，快速上手。",
+    "deployLink": "开始部署",
+    "footerCopyright": "© 2026 OpenClaw101. 为全球社区构建。",
+    "footerDisclaimer": "非官方导航网站。所有商标归其各自所有者所有。"
+  },
+  "deploy": {
+    "badge": "Docker 部署",
+    "title": "OpenClaw Docker 部署指南",
+    "subtitle": "使用 Docker 快速部署 OpenClaw，让你的 AI Agent 在几分钟内运行起来。",
+    "description": "使用 Docker 快速部署 OpenClaw，让你的 AI Agent 在几分钟内运行起来。",
+    "step1Title": "安装 Docker",
+    "step1Description": "如果你还没有安装 Docker，请先访问 Docker 官网下载并安装：",
+    "step1Button": "下载 Docker Desktop",
+    "step1Check": "安装完成后，确保 Docker 服务正在运行",
+    "step2Title": "拉取镜像",
+    "step2Description": "克隆 OpenClaw 仓库到本地：",
+    "step2Check": "克隆完成后，进入项目目录：",
+    "step3Title": "启动容器",
+    "step3Description": "使用 Docker Compose 一键启动所有服务：",
+    "step3Check1": "参数表示在后台运行容器",
+    "step3Check2": "首次启动会自动下载所需的 Docker 镜像，请耐心等待",
+    "step3Check3": "启动成功后，OpenClaw 将在后台持续运行",
+    "successTitle": "部署完成！",
+    "successDescription": "恭喜！你已经成功部署了 OpenClaw。现在可以开始配置你的 AI Agent 并连接到各种平台了。",
+    "successButton1": "查看完整文档",
+    "successButton2": "返回首页"
+  }
+}

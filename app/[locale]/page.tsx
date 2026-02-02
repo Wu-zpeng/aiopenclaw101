@@ -1,7 +1,15 @@
+'use client';
+
 import React from 'react';
 import { Github, Terminal, ArrowRight, Zap, BookOpen, Globe, Command, Cpu } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function Home() {
+  const t = useTranslations('home');
+  const tNav = useTranslations('nav');
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 selection:bg-green-500/30 font-sans">
       {/* Navbar */}
@@ -11,15 +19,18 @@ export default function Home() {
             <Terminal className="w-6 h-6 text-green-400" />
             <span>OpenClaw<span className="text-green-400">101</span></span>
           </div>
-          <a
-            href="https://github.com/GrapeBaBa/OpenClaw"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-medium hover:text-green-400 transition-colors"
-          >
-            <Github className="w-5 h-5" />
-            <span className="hidden sm:inline">GitHub</span>
-          </a>
+          <div className="flex items-center gap-6">
+            <LanguageSwitcher />
+            <a
+              href="https://github.com/GrapeBaBa/OpenClaw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium hover:text-green-400 transition-colors"
+            >
+              <Github className="w-5 h-5" />
+              <span className="hidden sm:inline">{tNav('github')}</span>
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -30,25 +41,25 @@ export default function Home() {
           <div className="text-center mb-24 space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-medium border border-green-500/20">
               <Globe className="w-3 h-3" />
-              <span>Global Availability · 全球平台支持</span>
+              <span>{t('badge')}</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
-              The Ultimate <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">AI Agent</span>
-              <br />Navigation
+              {t('title').split(' ').slice(0, -2).join(' ')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">{t('title').split(' ').slice(-2, -1).join(' ')}</span>
+              <br />{t('title').split(' ').slice(-1).join(' ')}
             </h1>
 
             <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              Your gateway to the Local-First AI revolution. <br />
-              <span className="text-slate-500 text-base">聚合 OpenClaw 核心资源、全球插件生态及保姆级部署指南。</span>
+              {t('subtitle')} <br />
+              <span className="text-slate-500 text-base">{t('description')}</span>
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <a href="#deploy" className="px-8 py-3 bg-green-500 hover:bg-green-400 text-slate-950 font-bold rounded-full transition-all flex items-center gap-2">
-                Start Building <ArrowRight className="w-4 h-4" />
+                {t('startBuilding')} <ArrowRight className="w-4 h-4" />
               </a>
               <a href="https://github.com/GrapeBaBa/OpenClaw" target="_blank" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-full transition-all border border-slate-700">
-                View on GitHub
+                {t('viewOnGitHub')}
               </a>
             </div>
           </div>
@@ -56,7 +67,7 @@ export default function Home() {
           {/* Supported Platforms (Logo Wall) */}
           <div className="mb-24">
             <h3 className="text-center text-slate-500 text-sm font-semibold uppercase tracking-wider mb-8">
-              Seamless Integration With · 无缝接入全球平台
+              {t('platformsTitle')}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               <PlatformCard name="Discord" icon={<DiscordIcon />} />
@@ -83,13 +94,13 @@ export default function Home() {
               <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
                 <Zap className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">OpenClaw Core</h2>
+              <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">{t('coreTitle')}</h2>
               <p className="text-slate-400 mb-6">
-                The official Local-First AI Agent repository.
-                <br /><span className="text-sm opacity-70">官方核心库，数据隐私掌握在自己手中。</span>
+                {t('coreDescription')}
+                <br /><span className="text-sm opacity-70">{t('coreSubDescription')}</span>
               </p>
               <div className="flex items-center text-sm font-semibold text-green-400">
-                Source Code <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                {t('coreLink')} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
 
@@ -106,13 +117,13 @@ export default function Home() {
               <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
                 <Globe className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Global Plugins</h2>
+              <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{t('pluginsTitle')}</h2>
               <p className="text-slate-400 mb-6">
-                Connect OpenClaw to Feishu, WeChat, and more.
-                <br /><span className="text-sm opacity-70">连接飞书、微信等国内平台的必备插件。</span>
+                {t('pluginsDescription')}
+                <br /><span className="text-sm opacity-70">{t('pluginsSubDescription')}</span>
               </p>
               <div className="flex items-center text-sm font-semibold text-blue-400">
-                Get Plugins <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                {t('pluginsLink')} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
 
@@ -126,15 +137,15 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-xl bg-slate-700/50 flex items-center justify-center mb-4 text-purple-400">
                     <BookOpen className="w-6 h-6" />
                   </div>
-                  <h2 className="text-2xl font-bold text-white mb-2">Deploy Guide</h2>
+                  <h2 className="text-2xl font-bold text-white mb-2">{t('deployTitle')}</h2>
                   <p className="text-slate-400 max-w-lg">
-                    Docker scripts, API configuration, and network setup. Zero to Hero in 10 minutes.
-                    <br /><span className="text-sm opacity-70">保姆级 Docker 一键部署教程，快速上手。</span>
+                    {t('deployDescription')}
+                    <br /><span className="text-sm opacity-70">{t('deploySubDescription')}</span>
                   </p>
                 </div>
-                <a href="/deploy" className="px-6 py-3 rounded-lg bg-green-500 hover:bg-green-400 text-slate-950 font-bold transition-all flex items-center gap-2">
-                  Start Deployment <ArrowRight className="w-4 h-4" />
-                </a>
+                <Link href="/deploy" className="px-6 py-3 rounded-lg bg-green-500 hover:bg-green-400 text-slate-950 font-bold transition-all flex items-center gap-2">
+                  {t('deployLink')} <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </div>
@@ -143,8 +154,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-slate-800/60 py-12 text-center text-slate-500 text-sm">
-        <p>© 2026 OpenClaw101. Built for the Global Community.</p>
-        <p className="mt-2 text-slate-600">Unofficial navigation site. All trademarks belong to their respective owners.</p>
+        <p>{t('footerCopyright')}</p>
+        <p className="mt-2 text-slate-600">{t('footerDisclaimer')}</p>
       </footer>
     </div>
   );
