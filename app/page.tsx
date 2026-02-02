@@ -126,15 +126,15 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-xl bg-slate-700/50 flex items-center justify-center mb-4 text-purple-400">
                     <BookOpen className="w-6 h-6" />
                   </div>
-                  <h2 className="text-2xl font-bold text-white mb-2">Deploy Guide (Coming Soon)</h2>
+                  <h2 className="text-2xl font-bold text-white mb-2">Deploy Guide</h2>
                   <p className="text-slate-400 max-w-lg">
                     Docker scripts, API configuration, and network setup. Zero to Hero in 10 minutes.
-                    <br /><span className="text-sm opacity-70">保姆级 Docker 一键部署教程，正在撰写中...</span>
+                    <br /><span className="text-sm opacity-70">保姆级 Docker 一键部署教程，快速上手。</span>
                   </p>
                 </div>
-                <button disabled className="px-6 py-3 rounded-lg bg-slate-700 text-slate-400 font-medium cursor-not-allowed border border-slate-600">
-                  Stay Tuned
-                </button>
+                <a href="/deploy" className="px-6 py-3 rounded-lg bg-green-500 hover:bg-green-400 text-slate-950 font-bold transition-all flex items-center gap-2">
+                  Start Deployment <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
