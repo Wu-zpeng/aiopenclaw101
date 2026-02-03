@@ -7,7 +7,7 @@
     "badge": "全球平台支持",
     "title": "终极 AI Agent 导航",
     "subtitle": "您通往本地优先 AI 革命的门户。",
-    "description": "聚合 OpenClaw 核心资源、全球插件生态及保姆级部署指南。",
+    "description": "OpenClaw (Clawdbot) 中文导航站。聚合核心资源及 Docker 一键部署教程，收录港股/A股打新监控、飞书自动化提醒等实战案例。小白也能用的 Local-First AI Agent 指南。",
     "startBuilding": "开始构建",
     "viewOnGitHub": "在 GitHub 查看",
     "platformsTitle": "无缝接入全球平台",
@@ -30,6 +30,10 @@
     "caseStockLink": "查看案例",
     "footerCopyright": "© 2026 OpenClaw101. 为全球社区构建。",
     "footerDisclaimer": "非官方导航网站。所有商标归其各自所有者所有。"
+  },
+  "stockCase": {
+    "meta_title": "3分钟搭建港股 IPO 监控机器人 | OpenClaw 实战案例",
+    "meta_description": "无需编程，通过 OpenClaw (Clawdbot) 搭建自动化港股/A股打新提醒助手。实时监控交易所公告，飞书秒级推送。Local-First AI 实战指南。"
   },
   "deploy": {
     "badge": "Docker 部署",

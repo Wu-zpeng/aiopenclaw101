@@ -7,7 +7,7 @@
     "badge": "Global Availability",
     "title": "The Ultimate AI Agent Navigation",
     "subtitle": "Your gateway to the Local-First AI revolution.",
-    "description": "Aggregating OpenClaw core resources, global plugin ecosystem, and comprehensive deployment guides.",
+    "description": "The ultimate OpenClaw guide. Deploy in 3 mins with Docker. Includes real-world use cases like Stock Monitoring & Feishu automation.",
     "startBuilding": "Start Building",
     "viewOnGitHub": "View on GitHub",
     "platformsTitle": "Seamless Integration With",
@@ -30,6 +30,10 @@
     "caseStockLink": "View Case",
     "footerCopyright": "© 2026 OpenClaw101. Built for the Global Community.",
     "footerDisclaimer": "Unofficial navigation site. All trademarks belong to their respective owners."
+  },
+  "stockCase": {
+    "meta_title": "Build a HK IPO Monitor in 3 Mins | OpenClaw Use Cases",
+    "meta_description": "Learn how to build a 24/7 Hong Kong Stock IPO monitor using OpenClaw without coding. Get real-time alerts via Feishu/Lark. The ultimate Local-First AI tutorial."
   },
   "deploy": {
     "badge": "Docker Deployment",

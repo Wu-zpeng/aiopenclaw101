@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       default: "OpenClaw 101 - " + t('title'),
     },
     description: t('description'),
-    keywords: ["OpenClaw", "Clawdbot", "AI Agent", "Local-First AI", "飞书机器人", "Moltbot", "Docker Deployment"],
+    keywords: ["OpenClaw", "Clawdbot", "AI Agent", "Local-First AI", "飞书机器人", "Moltbot", "Docker Deployment", "港股打新监控", "股票自动提醒", "自动化盯盘"],
     openGraph: {
       title: "OpenClaw 101 - " + t('title'),
       description: t('description'),
