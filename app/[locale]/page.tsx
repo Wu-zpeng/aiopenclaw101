@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Github, Terminal, ArrowRight, Zap, BookOpen, Globe, Command, Cpu } from 'lucide-react';
+import { Github, Terminal, ArrowRight, Zap, BookOpen, Globe, Command, Cpu, TrendingUp } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -22,7 +22,7 @@ export default function Home() {
           <div className="flex items-center gap-6">
             <LanguageSwitcher />
             <a
-              href="https://github.com/GrapeBaBa/OpenClaw"
+              href="https://github.com/openclaw/openclaw"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-medium hover:text-green-400 transition-colors"
@@ -54,11 +54,11 @@ export default function Home() {
               <span className="text-slate-500 text-base">{t('description')}</span>
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 pt-4">
-              <a href="#deploy" className="px-8 py-3 bg-green-500 hover:bg-green-400 text-slate-950 font-bold rounded-full transition-all flex items-center gap-2">
+            <div className="flex flex-wrap justify-center gap-4 pt-4 relative z-10">
+              <a href="#deploy" className="px-8 py-3 bg-green-500 hover:bg-green-400 text-slate-950 font-bold rounded-full transition-all flex items-center gap-2 cursor-pointer">
                 {t('startBuilding')} <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="https://github.com/GrapeBaBa/OpenClaw" target="_blank" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-full transition-all border border-slate-700">
+              <a href="https://github.com/openclaw/openclaw" target="_blank" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-full transition-all border border-slate-700 cursor-pointer">
                 {t('viewOnGitHub')}
               </a>
             </div>
@@ -79,27 +79,66 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Featured Use Cases */}
+          <div className="mb-24">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                {t('featuredTitle')}
+              </h2>
+              <p className="text-slate-400">
+                {t('featuredSubtitle')}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-1 gap-6 max-w-3xl mx-auto">
+              <Link
+                href="/cases/stock"
+                className="group p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-900/80 transition-all duration-300 relative overflow-hidden cursor-pointer"
+              >
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
+                  <TrendingUp className="w-24 h-24 text-blue-500" />
+                </div>
+                <div className="flex items-start gap-6 relative z-10">
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-3xl shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform flex-shrink-0">
+                    📈
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                      {t('caseStockTitle')}
+                    </h3>
+                    <p className="text-slate-400 mb-4 leading-relaxed">
+                      {t('caseStockDescription')}
+                    </p>
+                    <div className="flex items-center text-sm font-semibold text-blue-400">
+                      {t('caseStockLink')} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+
           {/* Core Resources Grid */}
           <div className="grid md:grid-cols-2 gap-6" id="resources">
             {/* Card 1: Core */}
             <a
-              href="https://github.com/GrapeBaBa/OpenClaw"
+              href="https://github.com/openclaw/openclaw"
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-green-500/50 hover:bg-slate-900/80 transition-all duration-300 relative overflow-hidden"
+              className="group p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-green-500/50 hover:bg-slate-900/80 transition-all duration-300 relative overflow-hidden cursor-pointer"
             >
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
                 <Cpu className="w-24 h-24" />
               </div>
-              <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform relative z-10">
                 <Zap className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">{t('coreTitle')}</h2>
-              <p className="text-slate-400 mb-6">
+              <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors relative z-10">{t('coreTitle')}</h2>
+              <p className="text-slate-400 mb-6 relative z-10">
                 {t('coreDescription')}
                 <br /><span className="text-sm opacity-70">{t('coreSubDescription')}</span>
               </p>
-              <div className="flex items-center text-sm font-semibold text-green-400">
+              <div className="flex items-center text-sm font-semibold text-green-400 relative z-10">
                 {t('coreLink')} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
@@ -109,30 +148,30 @@ export default function Home() {
               href="https://github.com/m1heng/clawdbot-feishu"
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-900/80 transition-all duration-300 relative overflow-hidden"
+              className="group p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-900/80 transition-all duration-300 relative overflow-hidden cursor-pointer"
             >
-              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
                 <Command className="w-24 h-24 text-blue-500" />
               </div>
-              <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center mb-6 text-blue-400 group-hover:scale-110 transition-transform relative z-10">
                 <Globe className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{t('pluginsTitle')}</h2>
-              <p className="text-slate-400 mb-6">
+              <h2 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors relative z-10">{t('pluginsTitle')}</h2>
+              <p className="text-slate-400 mb-6 relative z-10">
                 {t('pluginsDescription')}
                 <br /><span className="text-sm opacity-70">{t('pluginsSubDescription')}</span>
               </p>
-              <div className="flex items-center text-sm font-semibold text-blue-400">
+              <div className="flex items-center text-sm font-semibold text-blue-400 relative z-10">
                 {t('pluginsLink')} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </a>
 
             {/* Card 3: Tutorial (Full Width) */}
             <div id="deploy" className="md:col-span-2 group p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700/50 relative overflow-hidden">
-              <div className="absolute top-0 right-0 p-4 opacity-5">
+              <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
                 <BookOpen className="w-32 h-32" />
               </div>
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-slate-700/50 flex items-center justify-center mb-4 text-purple-400">
                     <BookOpen className="w-6 h-6" />
@@ -143,7 +182,7 @@ export default function Home() {
                     <br /><span className="text-sm opacity-70">{t('deploySubDescription')}</span>
                   </p>
                 </div>
-                <Link href="/deploy" className="px-6 py-3 rounded-lg bg-green-500 hover:bg-green-400 text-slate-950 font-bold transition-all flex items-center gap-2">
+                <Link href="/deploy" className="px-6 py-3 rounded-lg bg-green-500 hover:bg-green-400 text-slate-950 font-bold transition-all flex items-center gap-2 relative z-10">
                   {t('deployLink')} <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

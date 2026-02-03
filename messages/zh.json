@@ -23,6 +23,11 @@
     "deployDescription": "Docker 脚本、API 配置和网络设置。10 分钟从零到英雄。",
     "deploySubDescription": "保姆级 Docker 一键部署教程，快速上手。",
     "deployLink": "开始部署",
+    "featuredTitle": "精选实战",
+    "featuredSubtitle": "看看其他人如何用 OpenClaw 解决实际问题",
+    "caseStockTitle": "港股 IPO 监控机器人",
+    "caseStockDescription": "只要一句话指令，让 AI 自动监控交易所官网，新股消息秒级推送到飞书。绝不错过任何打新机会。",
+    "caseStockLink": "查看案例",
     "footerCopyright": "© 2026 OpenClaw101. 为全球社区构建。",
     "footerDisclaimer": "非官方导航网站。所有商标归其各自所有者所有。"
   },

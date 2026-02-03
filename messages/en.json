@@ -23,6 +23,11 @@
     "deployDescription": "Docker scripts, API configuration, and network setup. Zero to Hero in 10 minutes.",
     "deploySubDescription": "Comprehensive Docker one-click deployment tutorial for quick start.",
     "deployLink": "Start Deployment",
+    "featuredTitle": "Featured Use Cases",
+    "featuredSubtitle": "See how others use OpenClaw to solve real-world problems",
+    "caseStockTitle": "Hong Kong IPO Monitor Bot",
+    "caseStockDescription": "With just one command, let AI automatically monitor the stock exchange website and push new IPO alerts to Feishu in seconds. Never miss any opportunity.",
+    "caseStockLink": "View Case",
     "footerCopyright": "© 2026 OpenClaw101. Built for the Global Community.",
     "footerDisclaimer": "Unofficial navigation site. All trademarks belong to their respective owners."
   },

@@ -102,7 +102,7 @@ export default function DeployGuide() {
                   <div className="relative group/code">
                     <div className="absolute top-3 right-3 text-xs text-slate-500 font-mono">bash</div>
                     <pre className="bg-slate-950 border border-slate-800 rounded-lg p-4 overflow-x-auto">
-                      <code className="text-green-400 font-mono text-sm">git clone https://github.com/GrapeBaBa/OpenClaw.git</code>
+                      <code className="text-green-400 font-mono text-sm">git clone https://github.com/openclaw/openclaw.git</code>
                     </pre>
                   </div>
                   <div className="mt-4 flex items-start gap-2 text-sm text-slate-400">
@@ -169,7 +169,7 @@ export default function DeployGuide() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://github.com/GrapeBaBa/OpenClaw"
+                  href="https://github.com/openclaw/openclaw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-green-500 hover:bg-green-400 text-slate-950 font-bold rounded-lg transition-all"
