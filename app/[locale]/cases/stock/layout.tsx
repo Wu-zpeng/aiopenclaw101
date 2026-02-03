@@ -7,7 +7,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t('meta_title'),
     description: t('meta_description'),
-    keywords: ["港股IPO", "股票监控", "OpenClaw", "Clawdbot", "飞书机器人", "打新提醒", "A股监控", "HK IPO Monitor", "Stock Alert Bot"],
     openGraph: {
       title: t('meta_title'),
       description: t('meta_description'),
