@@ -30,6 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       default: "OpenClaw 101 - " + t('title'),
     },
     description: t('description'),
+    verification: {
+      google: 'd4lw1sUEe_VlPCiShvQIHScAxbAxL5Ppg47I_1jhKRg',
+    },
     openGraph: {
       title: "OpenClaw 101 - " + t('title'),
       description: t('description'),
